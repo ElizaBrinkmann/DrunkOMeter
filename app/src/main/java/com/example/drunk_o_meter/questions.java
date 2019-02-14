@@ -1,10 +1,10 @@
 package com.example.drunk_o_meter;
 
 public class questions {
-    private int counter;
+    private int counter = 0;
 
     public questions(){
-        public this.counter = 0;
+        this.counter = 0;
 
     }
 
@@ -12,12 +12,11 @@ public class questions {
         this.counter ++;
     }
 
-    @Override
     public String toString(){
-        if (this.counter == 0){
-            return ("Do you think dancing on a table is a fun idea?")
+        if (this.counter == 1){
+            return ("Do you think dancing on a table is a fun idea?");
         }
-
+        return ("Wrong");
     }
 
 

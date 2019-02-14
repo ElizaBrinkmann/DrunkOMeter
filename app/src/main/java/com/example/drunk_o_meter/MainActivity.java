@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
+    questions questions = new questions();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,8 +16,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onPress(View view){
-        questions
-        TextView tv = findViewById(R.id.TextView);
-        tv.setText(questions);
+        TextView tv = findViewById(R.id.textView);
+        tv.setText(questions.toString());
     }
 }
