@@ -16,7 +16,14 @@ public class questions {
         if (this.counter == 1){
             return ("Do you think dancing on a table is a fun idea?");
         }
-        return ("Wrong");
+        else if (this.counter == 2){
+            return ("Do you feel like calling your ex?");
+        }
+        else if (this.counter == 3){
+            return ("Is everyone around you suddenly attractive?");
+        }
+
+        return ("Something went super wrong");
     }
 
 

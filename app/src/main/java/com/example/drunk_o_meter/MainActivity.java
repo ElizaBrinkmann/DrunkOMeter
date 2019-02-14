@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onPress(View view){
+        questions.counting();
         TextView tv = findViewById(R.id.textView);
         tv.setText(questions.toString());
     }
