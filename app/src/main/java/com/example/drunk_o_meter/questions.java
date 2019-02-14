@@ -17,10 +17,13 @@ public class questions {
             return ("Do you think dancing on a table is a fun idea?");
         }
         else if (this.counter == 2){
-            return ("Do you feel like calling your ex?");
+            return ("Do you feel like calling your ex or mom?");
         }
         else if (this.counter == 3){
-            return ("Is everyone around you suddenly attractive?");
+            return ("Is everyone around you suddenly hot?");
+        }
+        else if (this.counter == 4){
+            return ("Do you feel like singing karaoke");
         }
 
         return ("Something went super wrong");
