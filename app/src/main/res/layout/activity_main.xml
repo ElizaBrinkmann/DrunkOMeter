@@ -32,7 +32,7 @@
     <Button
         android:id="@+id/button_no"
         android:layout_width="165dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_gravity="fill_horizontal"
         android:layout_marginStart="600dp"
         android:layout_marginLeft="16dp"
@@ -46,8 +46,9 @@
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:typeface="normal"
+        app:fontFamily="monospace"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.97"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -66,6 +67,7 @@
         android:text="@string/button_yes"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
+        app:fontFamily="monospace"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.013"
         app:layout_constraintStart_toStartOf="parent"
