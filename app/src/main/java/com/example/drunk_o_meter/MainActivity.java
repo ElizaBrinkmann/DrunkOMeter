@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     questions questions = new questions();
+    Score Score = new Score();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onPress(View view){
        if (findViewById(R.id.button)){
-            score.addToScore(1);
+            Score.addToScore(1);
         }
         questions.counting();
         TextView tv = findViewById(R.id.textView);
