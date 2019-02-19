@@ -17,10 +17,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onPress(View view){
-      /*  if ( R.id.button){
+       if (findViewById(R.id.button)){
             score.addToScore(1);
         }
-       */
         questions.counting();
         TextView tv = findViewById(R.id.textView);
         tv.setText(questions.toString());
