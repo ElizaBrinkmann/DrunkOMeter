@@ -1,5 +1,6 @@
 package com.example.drunk_o_meter;
 
+import android.R;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +17,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onPress(View view){
+      /*  if ( R.id.button){
+            score.addToScore(1);
+        }
+       */
         questions.counting();
         TextView tv = findViewById(R.id.textView);
         tv.setText(questions.toString());

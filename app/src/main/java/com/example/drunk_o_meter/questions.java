@@ -9,6 +9,7 @@ public class questions {
     }
 
     public void counting(){
+
         this.counter ++;
     }
 
