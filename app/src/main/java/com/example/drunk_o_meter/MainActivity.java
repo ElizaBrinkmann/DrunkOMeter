@@ -1,6 +1,6 @@
 package com.example.drunk_o_meter;
 
-import android.R;
+import android.R.*;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
