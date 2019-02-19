@@ -4,6 +4,7 @@ import android.R.*;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 
@@ -18,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onPress(View view){
-       if (findViewById(R.id.button)){
+        Button but= findViewById(R.id.button);
+       if (but == 1){
             Score.addToScore(1);
         }
         questions.counting();
