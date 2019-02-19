@@ -18,11 +18,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onPress(View view){
-       if (findViewById(R.id.button)){
+       if (view.getId(R.id.button_yes)){
             Score.addToScore(1);
         }
         questions.counting();
-        TextView tv = findViewById(R.id.textView);
+        TextView tv = findViewById(R.id.textView1);
         tv.setText(questions.toString());
     }
 }
