@@ -4,12 +4,16 @@ import android.R.*;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
     questions questions = new questions();
     Score Score = new Score();
+    Button but_yes = (Button) findViewById(R.id.button_yes);
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,11 +22,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onPress(View view){
-       if (view.getId(R.id.button_yes)){
+       if (view.getId() == R.id.button_yes)
+        {
             Score.addToScore(1);
         }
         questions.counting();
-        TextView tv = findViewById(R.id.textView1);
+        TextView tv = findViewById(R.id.textView);
         tv.setText(questions.toString());
     }
 }
