@@ -3,61 +3,67 @@ package com.example.drunk_o_meter;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
-import
+import android.os.Handler;
+import android.os.SystemClock;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
-import org.w3c.dom.Text;
 
 public class ButtonGame extends AppCompatActivity {
-
-
-    private static TextView countdownTimerText;
-    private static EditText seconds;
-    private static Button startTimer, resetTimer;
-    private static CountDownTimer countDownTimer;
-
+    private int seconds=0;
+    private boolean startRun;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_button_game);
-
-        TextView textView = (TextView) findViewById(R.id.Timer);
-
-        countdownTimerText = (TextView) findViewById(R.id.countdownText);
-
-        @Override
-        public void run() {
-            runOnUiThread(new Runnable() {
-
-                @Override
-                public void run() {
-                    TextView tv = (TextView) findViewById(R.id.main_timer_text);
-                    tv.setText(String.valueOf(minutes)+":"+String.valueOf(seconds));
-                    seconds -= 1;
-
-                    if(seconds == 0)
-                    {
-                        tv.setText(String.valueOf(minutes)+":"+String.valueOf(seconds));
-
-                        seconds=60;
-                        minutes=minutes-1;
-
-                    }
-
-
-
-                }
-
-            });
+        setContentView(R.layout.activity_main);
+        if(savedInstanceState != null){
+            seconds = savedInstanceState.getInt("seconds");
+            startRun=savedInstanceState.getBoolean("startRun");
         }
 
-    }, 0, 1000);
+        Timer();
+
+
+    }
+    public void onSaveInstanceState(Bundle saveInstanceState){
+        saveInstanceState.putInt("seconds", seconds);
+        saveInstanceState.putBoolean("startRun", startRun);
+    }
+
+    public void onClickStart(View view){
+        startRun=true;
+    }
+
+
+
+    private void Timer(){
+        final TextView timeView = (TextView)findViewById(R.id.Timer);
+        final Handler handler = new Handler();
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                int hours = seconds/3600;
+                int minutes = (seconds%3600)/60;
+                int secs = seconds%60;
+
+                String time = String.format("%d:%02d:%02d", hours, minutes, secs);
+
+                timeView.setText(time);
+
+                if(startRun){
+                    seconds++;
+                }
+
+                handler.postDelayed(this, 100);
+            }
+        });
+
+    }
 }
-
-
-
-
 
 
