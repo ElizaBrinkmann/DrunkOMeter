@@ -12,6 +12,12 @@ public class Score {
         this.score += i;
     }
 
+    public void addDrink(int score){
+        // add which and how has been drunk
+        // alcohol content and list in a separate class
+
+    }
+
    public int getScore() {
         return this.score;
     }
