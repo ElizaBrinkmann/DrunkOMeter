@@ -2,6 +2,13 @@ package com.example.drunk_o_meter;
 
 public class Drink extends Score {
     //will submit/supply the score class with the amount of drinks
+    String drinkName;
+    int drinkType;
+
+    public Drink(String drinkName, int drinkType){
+        this.drinkName = drinkName;
+        this.drinkType = drinkType;
+    }
 
 
     public void addDrinkInList(int typeDrink, int amountOfGlasses ){
