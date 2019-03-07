@@ -13,6 +13,10 @@ public class questions {
         this.counter ++;
     }
 
+    public int getCount(){
+        return this.counter;
+    }
+
     public String toString(){
         if (this.counter == 1){
             return ("Do you think dancing on a table is a fun idea?");
@@ -26,8 +30,9 @@ public class questions {
         else if (this.counter == 4){
             return ("Do you feel like singing karaoke");
         }
-
-        return ("Something went super wrong");
+        else
+            return ("Next you will add your drinks." +
+                " Click Yes to continue");
     }
 
 

@@ -10,6 +10,9 @@ public class Drink extends Score {
         this.drinkType = drinkType;
     }
 
+    public String getDrinkName(){
+        return this.drinkName;
+    }
 
     public void addDrinkInList(int typeDrink, int amountOfGlasses ){
         // We made a list but it's on chavilahs design page
