@@ -13,6 +13,7 @@
     <string name="button_start">start</string>
     <string name="textView2">Rules of this game</string>
     <string name="textView3">1. Hit the button \n\n 2. Hit the rest of the button according to the number shown \n\n 3. Do it in ascending order</string>
+    <string name="textView_title">Selecting drinks</string>
     <string name="Drinks">Beer\n Cider\n Wine\n Champagne\n Vodka\n Whisky \n Rum\n Cocktails\n Liquors\n Japanese Sake</string>
 
 

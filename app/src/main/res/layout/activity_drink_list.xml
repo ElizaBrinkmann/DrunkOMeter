@@ -9,6 +9,12 @@
     tools:context=".DrinkList">
 
 
+    <TextView
+        android:id="@+id/textView_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textView_title" />
+
     <ListView
         android:id="@+id/Drinks"
         android:layout_width="350dp"

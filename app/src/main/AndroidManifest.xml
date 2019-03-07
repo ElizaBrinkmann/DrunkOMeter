@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".DrinkList"></activity>
-        <activity android:name=".selectingdrinks" />
         <activity android:name=".ButtonGame1" />
         <activity android:name=".ButtonGame" />
         <activity android:name=".MainActivity">
