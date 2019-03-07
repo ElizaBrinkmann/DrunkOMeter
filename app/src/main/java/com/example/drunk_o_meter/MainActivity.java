@@ -12,7 +12,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     questions questions = new questions();
     Score Score = new Score();
-    Button but_yes = (Button) findViewById(R.id.button_yes);
+//    Button but_yes = (Button) findViewById(R.id.button_yes);
 
 
 
@@ -23,11 +23,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onPress(View view){
-        /*if ((questions.getCount()) == 5){
+        if ((questions.getCount()) == 5){
             Intent nextActivity = new Intent(MainActivity.this, DrinkList.class);
             startActivity(nextActivity);
 
-        } */
+        }
        if (view.getId() == R.id.button_yes)
         {
             Score.addToScore(1);
