@@ -44,7 +44,7 @@
         android:layout_weight="1"
         android:background="@color/Pink"
         android:gravity="center_vertical|center_horizontal"
-        android:text="@string/button_no"
+        android:text="@string/button_yes"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"

@@ -5,4 +5,6 @@
     <color name="colorAccent">#D81B60</color>
     <color name="Pink">#FC9999</color>
     <color name="White">#FFFFFF</color>
+    <color name="DarkPink">#913B3B</color>
+    <color name="DarkerWhite">#CBCBCB</color>
 </resources>

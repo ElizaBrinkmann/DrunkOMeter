@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Drunk-O-Meter</string>
     <string name="question_1">Are you drunk?</string>
-    <string name="button_yes">Y E S !</string>
+    <string name="button_yes">Y E S</string>
     <string name="button_no">N O</string>
     <string name="Timer">00:00</string>
     <string name="game_but1">1</string>
@@ -12,11 +12,8 @@
     <string name="textView1"> </string>
     <string name="button_start">start</string>
     <string name="textView2">Rules of this game</string>
-    <string name="textView3">You will soon enter the page of button game as the final step of testings,
-        once you click the button start fo go to the other screen. In the game page, there will be 5 buttons for you to
-        click on according to the number presented on their bodies. All numbers are randomly generated, please select the smallest numbered button first, then selecting the rest
-        in ascending order. Once you finish clicking all the buttons for once, the game will be ended, the accuracy and speed of your moves will add into our
-        scoring system to determine how drunk you are.</string>
+    <string name="textView3">1. Hit the button \n\n 2. Hit the rest of the button according to the number shown \n\n 3. Do it in ascending order</string>
+    <string name="Drinks">Beer\n Cider\n Wine\n Champagne\n Vodka\n Whisky \n Rum\n Cocktails\n Liquors\n Japanese Sake</string>
 
 
 </resources>
