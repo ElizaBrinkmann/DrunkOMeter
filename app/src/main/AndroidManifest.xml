@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".AddDrinks"></activity>
         <activity android:name=".DrinkList" />
-        <activity android:name=".instruction" />
+        <activity android:name=".Instruction" />
         <activity android:name=".ButtonGame" />
         <activity android:name=".MainActivity">
             <intent-filter>
