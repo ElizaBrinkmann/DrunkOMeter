@@ -5,35 +5,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#020000"
-    android:paddingTop="50dp"
-    tools:context=".DrinkList">
+    android:paddingLeft="15dp"
+    android:paddingTop="25dp"
+    android:paddingRight="15dp"
+    tools:context=".DrinkList" >
 
 
     <TextView
         android:id="@+id/textView_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/textView_title" />
+        android:layout_width="250dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="44dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/textView_title"
+        android:textColor="@color/White"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        app:layout_constraintBottom_toTopOf="@+id/Drinks"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/Drinks"
-        android:layout_width="350dp"
-        android:layout_height="match_parent"
+        android:layout_width="347dp"
+        android:layout_height="0dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:background="@color/White"
         android:foregroundGravity="center_vertical|center_horizontal"
+        android:scrollHorizontally="true"
         android:textAlignment="gravity"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="50dp" />
-
-
-
-
-
+        app:layout_constraintTop_toBottomOf="@+id/textView_title" />
 
 
 </android.support.constraint.ConstraintLayout>
