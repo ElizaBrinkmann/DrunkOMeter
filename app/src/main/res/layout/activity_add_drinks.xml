@@ -4,6 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#020000"
+    android:paddingLeft="15dp"
+    android:paddingTop="25dp"
+    android:paddingRight="15dp"
     tools:context=".AddDrinks">
 
     <TextView
@@ -14,6 +18,10 @@
         android:layout_marginLeft="115dp"
         android:layout_marginTop="113dp"
         android:text="TextView"
+        android:textColor="@color/White"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="monospace"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
