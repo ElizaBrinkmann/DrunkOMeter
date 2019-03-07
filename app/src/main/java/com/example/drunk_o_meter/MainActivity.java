@@ -12,7 +12,6 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     questions questions = new questions();
     Score Score = new Score();
-//    Button but_yes = (Button) findViewById(R.id.button_yes);
 
 
 
@@ -31,10 +30,14 @@ public class MainActivity extends AppCompatActivity {
        if (view.getId() == R.id.button_yes)
         {
             Score.addToScore(1);
+            //TextView tvScore = findViewById(R.id.textViewScore);
+            //tvScore.setText(Score.toString());
         }
         questions.counting();
         TextView tv = findViewById(R.id.textView);
         tv.setText(questions.toString());
+
+
 
     }
 

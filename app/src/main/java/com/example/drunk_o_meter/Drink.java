@@ -30,5 +30,11 @@ public class Drink extends Score {
 
     }
 
+    @Override
+    public String toString() {
+
+        return getDrinkName();
+    }
 
 }
+

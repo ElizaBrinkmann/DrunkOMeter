@@ -18,7 +18,10 @@ public class questions {
     }
 
     public String toString(){
-        if (this.counter == 1){
+        if (this.counter == 0){
+            return ("Are you drunk?");
+        }
+        else if (this.counter == 1){
             return ("Do you think dancing on a table is a fun idea?");
         }
         else if (this.counter == 2){
@@ -28,7 +31,7 @@ public class questions {
             return ("Is everyone around you suddenly hot?");
         }
         else if (this.counter == 4){
-            return ("Do you feel like singing karaoke");
+            return ("Do you feel like singing karaoke?");
         }
         else
             return ("Next you will add your drinks." +
