@@ -4,18 +4,28 @@ public class Drink extends Score {
     //will submit/supply the score class with the amount of drinks
     String drinkName;
     int drinkType;
+    int amountOfGlasses;
 
     public Drink(String drinkName, int drinkType){
         this.drinkName = drinkName;
         this.drinkType = drinkType;
+        this.amountOfGlasses = 0;
     }
 
     public String getDrinkName(){
         return this.drinkName;
     }
 
+    public void addAmountOfGlasses(){
+        this.amountOfGlasses ++;
+    }
+
+    public String getAmountOfGlasses(){
+        return ""+ this.amountOfGlasses;
+    }
+
     public void addDrinkInList(int typeDrink, int amountOfGlasses ){
-        // We made a list but it's on chavilahs design page
+
         // for instance 1 beer, 2 wine (1 glass is 25 cl), 3 whiskey etc
         if (typeDrink == 2){
             addDrink((amountOfGlasses * 2));
@@ -35,6 +45,7 @@ public class Drink extends Score {
 
         return getDrinkName();
     }
+
 
 }
 

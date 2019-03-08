@@ -16,6 +16,10 @@
     <string name="textView_title">Selecting drinks</string>
     <string name="Drinks">Beer\n Cider\n Wine\n Champagne\n Vodka\n Whisky \n Rum\n Cocktails\n Liquors\n Japanese Sake</string>
     <string name="textviewScore">0</string>
+    <string name="textViewDrink">Drink</string>
+    <string name="textviewNumberOfDrinks">0</string>
+    <string name="button_add">ADD</string>
+    <string name="button_less">LESS</string>
 
 
 </resources>
