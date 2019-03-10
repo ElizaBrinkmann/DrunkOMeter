@@ -71,7 +71,6 @@
         android:layout_marginRight="53dp"
         android:layout_marginBottom="8dp"
         android:background="#020000"
-        android:onClick="onPress"
         android:text="@string/button_add"
         android:textColor="@color/White"
         android:textSize="20sp"

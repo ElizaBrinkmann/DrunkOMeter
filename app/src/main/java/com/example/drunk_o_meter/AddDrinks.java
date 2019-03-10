@@ -7,7 +7,9 @@ import android.widget.TextView;
 
 public class AddDrinks extends AppCompatActivity {
 
-    ListOfDrinks drink = new Drink();
+
+    int i = getIntent().getIntExtra("Chosen drink", 0);
+    Drink drink = new Drink(ListOfDrinks.getInstance().getDrinks(i).getDrinkName(), ListOfDrinks.getInstance().getDrinks(i).getAmountOfGlasses());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,22 +17,22 @@ public class AddDrinks extends AppCompatActivity {
         setContentView(R.layout.activity_add_drinks);
 
         int i = getIntent().getIntExtra("Chosen drink", 0);
-        ((TextView)findViewById(R.id.textViewDrink)).setText(ListOfDrinks.getInstance().getDrinks(i).getDrinkName());
+        //Drink drink = new Drink(ListOfDrinks.getInstance().getDrinks(i).getDrinkName(), ListOfDrinks.getInstance().getDrinks(i).getAmountOfGlasses()); // int to string
+        ((TextView) findViewById(R.id.textViewDrink)).setText(ListOfDrinks.getInstance().getDrinks(i).getDrinkName());
         drink.setDrinkName(ListOfDrinks.getInstance().getDrinks(i).getDrinkName());
     }
 
+        public void onPress (View view){
+            drink.addAmountOfGlasses();
+            TextView tv = findViewById(R.id.TextViewNumberOfDrinks);
+            tv.setText(drink.getAmountOfGlasses());
+        }
 
-    public void onPress(View view){
-        drink.addAmountOfGlasses();
-        TextView tv = findViewById(R.id.TextViewNumberOfDrinks);
-        tv.setText(drink.getAmountOfGlasses());
-    }
-
-    public void onClick(View view){
-        drink.lessAmountOfGlasses();
-        TextView tv = findViewById(R.id.TextViewNumberOfDrinks);
-        tv.setText(drink.getAmountOfGlasses());
-    }
+        public void onClick (View view){
+            drink.lessAmountOfGlasses();
+            TextView tv = findViewById(R.id.TextViewNumberOfDrinks);
+            tv.setText(drink.getAmountOfGlasses());
+        }
 
 
 }

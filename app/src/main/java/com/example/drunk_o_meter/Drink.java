@@ -22,8 +22,8 @@ public class Drink extends Score {
     }
     public void lessAmountOfGlasses(){ this.amountOfGlasses --;}
 
-    public String getAmountOfGlasses(){
-        return ""+ this.amountOfGlasses;
+    public int getAmountOfGlasses(){
+        return this.amountOfGlasses;
     }
 
     public void addDrinkInList(int typeDrink, int amountOfGlasses ){
