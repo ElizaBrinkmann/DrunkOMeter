@@ -36,6 +36,7 @@ public class ButtonGame extends AppCompatActivity {
     }
 
     public void onClickStart(View view){
+
         startRun=true;
     }
 
