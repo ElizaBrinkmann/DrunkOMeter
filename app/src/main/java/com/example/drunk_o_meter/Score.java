@@ -36,6 +36,7 @@ public class Score {
             //about 6 beers in 5 hours
             return ("You are drunk, go home!");
         }
+         return ("You are drunk, go home!");
     }
 
 }

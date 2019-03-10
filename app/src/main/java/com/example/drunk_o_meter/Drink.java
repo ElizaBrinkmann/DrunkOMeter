@@ -6,19 +6,21 @@ public class Drink extends Score {
     int drinkType;
     int amountOfGlasses;
 
-    public Drink(String drinkName, int drinkType){
-        this.drinkName = drinkName;
-        this.drinkType = drinkType;
+    public Drink(String drinkName, int drinkType ){
+        this.drinkName = "empty";
+        this.drinkType = 0;
         this.amountOfGlasses = 0;
     }
 
     public String getDrinkName(){
         return this.drinkName;
     }
+    public void setDrinkName(String drinkName){ this.drinkName = drinkName; }
 
     public void addAmountOfGlasses(){
         this.amountOfGlasses ++;
     }
+    public void lessAmountOfGlasses(){ this.amountOfGlasses --;}
 
     public String getAmountOfGlasses(){
         return ""+ this.amountOfGlasses;
