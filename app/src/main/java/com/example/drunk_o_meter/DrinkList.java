@@ -24,8 +24,8 @@ public class DrinkList extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Log.d("onClick", "onItemClick(" + i + ")");
-                Intent nextActivity = new Intent(DrinkList.this, AddDrinks.class);
-                nextActivity.putExtra("activity_president_information", i);
+                Intent nextActivity = new Intent(view.getContext(), AddDrinks.class);
+                nextActivity.putExtra("Chosen drink", i);
                 startActivity(nextActivity);
 
 

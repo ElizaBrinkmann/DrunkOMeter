@@ -7,8 +7,8 @@ public class Drink extends Score {
     int amountOfGlasses;
 
     public Drink(String drinkName, int drinkType ){
-        this.drinkName = "empty";
-        this.drinkType = 0;
+        this.drinkName = drinkName;
+        this.drinkType = drinkType;
         this.amountOfGlasses = 0;
     }
 
@@ -17,9 +17,7 @@ public class Drink extends Score {
     }
     public void setDrinkName(String drinkName){ this.drinkName = drinkName; }
 
-    public void addAmountOfGlasses(){
-        this.amountOfGlasses ++;
-    }
+    public void addAmountOfGlasses(){ this.amountOfGlasses ++;}
     public void lessAmountOfGlasses(){ this.amountOfGlasses --;}
 
     public int getAmountOfGlasses(){
