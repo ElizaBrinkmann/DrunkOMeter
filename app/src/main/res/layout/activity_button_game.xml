@@ -27,7 +27,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/game_but1"
+        android:id="@+id/game_but5"
         android:layout_width="90dp"
         android:layout_height="45dp"
         android:layout_marginStart="164dp"
@@ -40,14 +40,14 @@
         android:text="@string/game_but1"
         android:textColor="@color/White"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/game_but4"
+        app:layout_constraintBottom_toTopOf="@+id/game_but5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Timer" />
 
     <Button
-        android:id="@+id/game_but2"
+        android:id="@+id/game_but5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="232dp"
@@ -60,7 +60,7 @@
         tools:layout_editor_absoluteY="379dp" />
 
     <Button
-        android:id="@+id/game_but3"
+        android:id="@+id/game_but5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -73,7 +73,7 @@
         tools:layout_editor_absoluteY="501dp" />
 
     <Button
-        android:id="@+id/game_but4"
+        android:id="@+id/game_but5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
@@ -86,7 +86,7 @@
         tools:layout_editor_absoluteY="599dp" />
 
     <Button
-        android:id="@+id/game_but5"
+        android:id="@+id/game_but2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
