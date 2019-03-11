@@ -1,6 +1,6 @@
 package com.example.drunk_o_meter;
 
-public class Drink extends ScoreSingleton {
+public class Drink {
     //will submit/supply the score class with the amount of drinks
     String drinkName;
     int drinkType;
