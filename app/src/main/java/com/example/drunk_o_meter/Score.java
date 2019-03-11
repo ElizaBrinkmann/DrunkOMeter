@@ -15,7 +15,7 @@ public class Score {
     public void addDrink(int score){
         // add which and how has been drunk
         // alcohol content and list in a separate class
-      this.score+=score;
+
     }
 
    public int getScore() {
