@@ -1,6 +1,6 @@
 package com.example.drunk_o_meter;
 
-public class Drink extends Score {
+public class Drink extends ScoreSingleton {
     //will submit/supply the score class with the amount of drinks
     String drinkName;
     int drinkType;
@@ -43,14 +43,14 @@ public class Drink extends Score {
 
         // for instance 1 beer, 2 wine (1 glass is 25 cl), 3 whiskey etc
         if (typeDrink == 2){
-            addToScore((amountOfGlasses));
+            addScore((amountOfGlasses));
         }
 
         else if (typeDrink == 1){
-            addToScore(amountOfGlasses);
+            addScore(amountOfGlasses);
         }
         else if (typeDrink > 2){
-            addToScore((amountOfGlasses));
+            addScore((amountOfGlasses));
         }
 
 

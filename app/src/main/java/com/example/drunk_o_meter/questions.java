@@ -1,6 +1,6 @@
 package com.example.drunk_o_meter;
 
-public class questions {
+public class questions extends ScoreSingleton {
     private int counter = 0;
 
     public questions(){
@@ -36,6 +36,7 @@ public class questions {
         else
             return ("Next you will add your drinks." +
                 " Click Yes to continue");
+
     }
 
 
