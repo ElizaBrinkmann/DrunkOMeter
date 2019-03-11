@@ -12,7 +12,7 @@ class ScoreSingleton {
 
     private int score;
     private ScoreSingleton(){
-        this.score=0;
+        this.score = 0;
 
     }
 

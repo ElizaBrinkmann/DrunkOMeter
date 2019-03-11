@@ -19,6 +19,9 @@ public class AddDrinks extends AppCompatActivity {
         drink = ListOfDrinks.getInstance().getDrinks(i); // int to string
         TextView drinkName = findViewById(R.id.textViewDrink);
         drinkName.setText(drink.getDrinkName());
+        TextView tv = findViewById(R.id.textViewScore);
+        tv.setText(String.valueOf(ScoreSingleton.getInstance().getScore()));
+
     }
 
     public void onPress (View view){
