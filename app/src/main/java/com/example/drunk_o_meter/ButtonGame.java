@@ -36,7 +36,7 @@ public class ButtonGame extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_button_game);
         integers = new String[3];
         integers[0] = "2";
         integers[1] = "3";
