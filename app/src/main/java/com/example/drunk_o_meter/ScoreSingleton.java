@@ -18,4 +18,9 @@ class ScoreSingleton {
     public void addScore(int i){
         score= score + i;
     }
+    @Override
+    public String toString() {
+
+        return ""+this.score;
+    }
 }
