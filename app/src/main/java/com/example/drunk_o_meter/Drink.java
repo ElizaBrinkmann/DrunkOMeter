@@ -43,14 +43,14 @@ public class Drink extends Score {
 
         // for instance 1 beer, 2 wine (1 glass is 25 cl), 3 whiskey etc
         if (typeDrink == 2){
-            addToScore((amountOfGlasses * 2));
+            addToScore((amountOfGlasses));
         }
 
         else if (typeDrink == 1){
             addToScore(amountOfGlasses);
         }
         else if (typeDrink > 2){
-            addToScore((amountOfGlasses*3));
+            addToScore((amountOfGlasses));
         }
 
 

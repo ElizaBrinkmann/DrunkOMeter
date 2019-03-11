@@ -8,6 +8,7 @@ import android.widget.TextView;
 public class AddDrinks extends AppCompatActivity {
 
     private Drink drink;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +35,7 @@ public class AddDrinks extends AppCompatActivity {
     public void onHit(View view){
         drink.addDrinkInList(drink.getDrinkType(), drink.getAmountOfGlasses());
         TextView tv = findViewById(R.id.textViewScore);
-        tv.setText(String.valueOf(Score.getScore()); //probably have to do this through super or something.
+        // tv.setText(String.valueOf(Score.getScore())); //probably have to do this through super or something.
     }
 
 }
