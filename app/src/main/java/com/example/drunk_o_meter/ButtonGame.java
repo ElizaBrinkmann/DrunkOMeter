@@ -9,6 +9,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import java.util.Random;
+import java.util.Timer;
+import java.util.ArrayList;
+import java.util.Arrays;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -16,12 +19,32 @@ import android.widget.TextView;
 public class ButtonGame extends AppCompatActivity {
     private int seconds=0;
     private boolean startRun;
+    private String[] integers;
+
+
+    Button but1 = (Button) findViewById(R.id.game_but1);
+    Button but2 = (Button) findViewById(R.id.game_but2);
+    Button but3 = (Button) findViewById(R.id.game_but3);
+    Button but4 = (Button) findViewById(R.id.game_but4);
+    Button but5 = (Button) findViewById(R.id.game_but5);
+
+    int[] array = {2, 3, 4, 5};
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        integers = new String[3];
+        integers[0] = "2";
+        integers[1] = "3";
+        integers[2] = "4";
+        integers[3] = "5";
+
+
+
         if(savedInstanceState != null){
             seconds = savedInstanceState.getInt("seconds");
             startRun=savedInstanceState.getBoolean("startRun");
@@ -31,39 +54,67 @@ public class ButtonGame extends AppCompatActivity {
 
 
     }
-    public void onSaveInstanceState(Bundle saveInstanceState){
+
+
+    public void setSaveInstanceState(Bundle saveInstanceState){
         saveInstanceState.putInt("seconds", seconds);
         saveInstanceState.putBoolean("startRun", startRun);
     }
 
-    public void onClickStart(View view){
-
-        startRun=true;
-    }
 
 
 
-    private void Timer(){
-        final TextView timeView = (TextView)findViewById(R.id.Timer);
+
+    private void Timer() {
+        final TextView timeView = (TextView) findViewById(R.id.Timer);
         final Handler handler = new Handler();
         handler.post(new Runnable() {
             @Override
             public void run() {
-                int hours = seconds/3600;
-                int minutes = (seconds%3600)/60;
-                int secs = seconds%60;
+                int hours = seconds / 3600;
+                int minutes = (seconds % 3600) / 60;
+                int secs = seconds % 60;
 
                 String time = String.format("%d:%02d:%02d", hours, minutes, secs);
 
                 timeView.setText(time);
 
-                if(startRun){
+                if (startRun) {
                     seconds++;
                 }
 
                 handler.postDelayed(this, 100);
             }
         });
+
+        but1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                ButtonGame.super.onStart();
+
+                int x = 0 + (int)(Math.random() * ((3 - 0) + 1));
+                String helloText = integers[x];
+                TextView.setText(integers[4]);
+
+
+            }
+
+        });
+
+
+        but5.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view){
+
+
+
+                ButtonGame.super.onPause();
+            }
+
+
+        });
+
+
 
     }
 
