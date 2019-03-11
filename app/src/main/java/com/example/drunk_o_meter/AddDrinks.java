@@ -1,5 +1,6 @@
 package com.example.drunk_o_meter;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,8 +20,8 @@ public class AddDrinks extends AppCompatActivity {
         drink = ListOfDrinks.getInstance().getDrinks(i); // int to string
         TextView drinkName = findViewById(R.id.textViewDrink);
         drinkName.setText(drink.getDrinkName());
-        TextView tv = findViewById(R.id.textViewScore);
-        tv.setText(String.valueOf(ScoreSingleton.getInstance().getScore()));
+        //TextView tv = findViewById(R.id.textViewScore);
+        //tv.setText(String.valueOf(ScoreSingleton.getInstance().getScore()));
 
     }
 
@@ -39,8 +40,12 @@ public class AddDrinks extends AppCompatActivity {
     // send score to scoresingleton
     public void onHit(View view){
         drink.addDrinkInList(drink.getDrinkType(), drink.getAmountOfGlasses());
-        TextView tv = findViewById(R.id.textViewScore);
-        tv.setText(String.valueOf(ScoreSingleton.getInstance().getScore())); //probably have to do this through super or something.
+        //TextView tv = findViewById(R.id.textViewScore);
+        //tv.setText(String.valueOf(ScoreSingleton.getInstance().getScore())); //probably have to do this through super or something.
     }
 
+    public void onSlap(View view){
+        Intent nextActivity = new Intent(AddDrinks.this, Instruction.class);
+        startActivity(nextActivity);
+    }
 }

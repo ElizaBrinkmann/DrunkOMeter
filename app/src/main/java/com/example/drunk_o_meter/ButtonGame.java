@@ -1,5 +1,6 @@
 package com.example.drunk_o_meter;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -7,25 +8,20 @@ import android.view.View;
 import java.util.Collections;
 import java.util.Arrays;
 import android.widget.Button;
-import android.widget.TextView;
 
 
 public class ButtonGame extends AppCompatActivity {
-    //private int seconds=0;
-   // private boolean startRun;
-    // Random rnd = new Random();
 
-    private String [] randomNumber;
-    int currentNumber =1;
+    private long startTime;
+    private String[] numbers = {"1", "2", "3", "4", "5"};
+    private int currentNumber = 1;
 
 
-    Button but1 = (Button) findViewById(R.id.game_but5);
-    Button but2 = (Button) findViewById(R.id.game_but2);
-    Button but3 = (Button) findViewById(R.id.game_but5);
-    Button but4 = (Button) findViewById(R.id.game_but5);
-    Button but5 = (Button) findViewById(R.id.game_but5);
-
-    TextView textView = findViewById(R.id.game_but5);
+    Button but1 = findViewById(R.id.game_but1);
+    Button but2 = findViewById(R.id.game_but2);
+    Button but3 = findViewById(R.id.game_but3);
+    Button but4 = findViewById(R.id.game_but4);
+    Button but5 = findViewById(R.id.game_but4);
 
 
 
@@ -34,28 +30,36 @@ public class ButtonGame extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_button_game);
-        long startTime = System.currentTimeMillis();
+        startTime = System.currentTimeMillis();
 
-        
-        randomNumber = new String[5];
-        randomNumber[0] = "1";
-        randomNumber[1] = "2";
-        randomNumber[2] = "3";
-        randomNumber[3] = "4";
-        randomNumber[4] = "5";
-        Collections.shuffle(Arrays.asList(randomNumber));
+        Collections.shuffle(Arrays.asList(numbers));
+        but1.setText(numbers[0]);
+        but2.setText(numbers[1]);
+        but3.setText(numbers[2]);
+        but4.setText(numbers[3]);
+        but5.setText(numbers[4]);
     }
-    
-    public void onClick(View  view){
-        if (randomNumber.valueOf(textView.getText()) == currentNumber);
-        currentNumber ++;
-        long endTime = System.currentTimeMillis();
 
+    public void onClick(View view) {
+        Button clicked = (Button)view;
+        //This is very clunky and can probably be done a better way
+        if(currentNumber == Integer.valueOf(clicked.getText().toString())){
+            /*If the number displayed in the button is the same as the number you're currently expecting
+            add 1 to currentNumber and do something to the text of the button clicked
+             */
+            currentNumber++;
+            clicked.setText("---");
+        }
+
+        //Maybe something like this to end the game
+        if(currentNumber == 6){
+            //The number will be 6 after successfully clicking the 5th button.
+            long endTime = System.currentTimeMillis() - startTime;
+            int score = (int) (endTime/1000);
+            ScoreSingleton.getInstance().addScore(score);
+            Intent nextActivity = new Intent(ButtonGame.this, Advise.class);
+            startActivity(nextActivity);
+        }
     }
-    
-
 
 }
-
-
-

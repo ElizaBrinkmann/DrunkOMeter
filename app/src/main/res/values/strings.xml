@@ -21,6 +21,9 @@
     <string name="button_less">LESS</string>
     <string name="save_drinks">Save drinks</string>
     <string name="textview">0</string>
+    <string name="next">Next</string>
+    <string name="only_from_the_last_5_hours_once_added_it_cant_be_removed_press_back_to_add_other_drinks">Only from the last 5 hours once added it cant be removed. Press back to add other drinks.</string>
+    <string name="insert_drinks">INSERT DRINKS</string>
 
     <string-array name="Integers">
         <item>2</item>
@@ -29,5 +32,4 @@
         <item>5</item>
 
     </string-array>
-
-
+    </resources>
