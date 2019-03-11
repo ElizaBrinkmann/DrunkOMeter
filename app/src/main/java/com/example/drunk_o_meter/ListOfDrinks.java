@@ -14,14 +14,14 @@ class ListOfDrinks {
     private ListOfDrinks() {
         listOfDrinks = new ArrayList<Drink>();
         listOfDrinks.add(new Drink("Beer", 1));
-        listOfDrinks.add(new Drink("Wine", 2));
+        listOfDrinks.add(new Drink("Wine", 1));
         listOfDrinks.add(new Drink("Cider", 1));
-        listOfDrinks.add(new Drink("Liquor", 3));
-        listOfDrinks.add(new Drink("Whisky", 3));
-        listOfDrinks.add(new Drink("Tequila", 3));
-        listOfDrinks.add(new Drink("Brandy", 3));
-        listOfDrinks.add(new Drink("Rum", 3));
-        listOfDrinks.add(new Drink("Gin", 3));
+        listOfDrinks.add(new Drink("Liquor", 1));
+        listOfDrinks.add(new Drink("Whisky", 1));
+        listOfDrinks.add(new Drink("Tequila", 1));
+        listOfDrinks.add(new Drink("Brandy", 1));
+        listOfDrinks.add(new Drink("Rum", 1));
+        listOfDrinks.add(new Drink("Gin", 1));
 
 
     }

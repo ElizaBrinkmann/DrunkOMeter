@@ -96,17 +96,12 @@ public class ButtonGame extends AppCompatActivity {
                 int x = (int)(Math.random() * ((3) + 1));
                 String helloText = integers[x];
                 TextView.setText(integers[4]);
-
-
             }
 
         });
 
-
         but5.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view){
-
-
 
                 ButtonGame.super.onPause();
             }

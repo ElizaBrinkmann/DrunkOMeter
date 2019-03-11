@@ -10,17 +10,18 @@ public class Advise extends AppCompatActivity {
     AdvisePage advicePage = new AdvisePage();
 
     @Override
+    //placing the advice in adviceView
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_advise);
 
-        TextView tv = findViewById(R.id.adviseView);
-        tv.setText(advicePage.giveAdvise());
+        TextView tv = findViewById(R.id.adviseView);//places the advice in adviceView
+        tv.setText(advicePage.giveAdvise());//gives the advice according to the score
     }
-
+//when pressed starts the test again
     public void onClick (View view) {
-        Intent nextActivity = new Intent(Advise.this, MainActivity.class);
-        startActivity(nextActivity);
+        Intent nextActivity = new Intent(Advise.this, MainActivity.class);//moves from Advise page to MainActivity
+        startActivity(nextActivity);//starting new activity
     }
 
 }

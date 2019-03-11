@@ -5,7 +5,7 @@ public class AdvisePage {
     int score;
 
     public AdvisePage(){
-        this.score = ScoreSingleton.getInstance().getScore();
+        this.score = ScoreSingleton.getInstance().getScore();//gets the score from the singleton
     }
     public String giveAdvise() {
         if (this.score <= 3) {
