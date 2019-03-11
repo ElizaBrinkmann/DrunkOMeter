@@ -19,6 +19,8 @@
     <string name="textViewNumberOfDrinks">0</string>
     <string name="button_add">ADD</string>
     <string name="button_less">LESS</string>
+    <string name="save_drinks">Save drinks</string>
+    <string name="textview">0</string>
 
 
 </resources>

@@ -5,20 +5,35 @@ public class Drink extends Score {
     String drinkName;
     int drinkType;
     int amountOfGlasses;
+    int scoreDrinks;
+
+
 
     public Drink(String drinkName, int drinkType ){
         this.drinkName = drinkName;
         this.drinkType = drinkType;
         this.amountOfGlasses = 0;
+        this.scoreDrinks = 0;
     }
 
     public String getDrinkName(){
         return this.drinkName;
     }
-    public void setDrinkName(String drinkName){ this.drinkName = drinkName; }
+    public void setDrinkName(String drinkName){ this.drinkName = drinkName; } //can probably be deleted
+
+    public int getDrinkType(){ return this.drinkType;}
 
     public void addAmountOfGlasses(){ this.amountOfGlasses ++;}
-    public void lessAmountOfGlasses(){ this.amountOfGlasses --;}
+
+    public void lessAmountOfGlasses(){
+        if (this.amountOfGlasses > 0) {
+            this.amountOfGlasses --;
+        }
+        else {
+            this.amountOfGlasses = 0;
+        }
+
+    }
 
     public int getAmountOfGlasses(){
         return this.amountOfGlasses;
@@ -28,15 +43,16 @@ public class Drink extends Score {
 
         // for instance 1 beer, 2 wine (1 glass is 25 cl), 3 whiskey etc
         if (typeDrink == 2){
-            addDrink((amountOfGlasses * 2));
+            addToScore((amountOfGlasses * 2));
         }
 
         else if (typeDrink == 1){
-            addDrink(amountOfGlasses);
+            addToScore(amountOfGlasses);
         }
         else if (typeDrink > 2){
-            addDrink((amountOfGlasses*3));
+            addToScore((amountOfGlasses*3));
         }
+
 
     }
 

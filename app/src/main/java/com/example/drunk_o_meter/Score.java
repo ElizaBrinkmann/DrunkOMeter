@@ -16,6 +16,7 @@ public class Score {
         // add which and how has been drunk
         // alcohol content and list in a separate class
 
+
     }
 
    public int getScore() {
