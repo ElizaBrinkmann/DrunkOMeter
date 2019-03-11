@@ -9,12 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Advise"></activity>
-        <activity android:name=".AddDrinks" />
-        <activity android:name=".DrinkList" />
-        <activity android:name=".Instruction" />
-        <activity android:name=".ButtonGame" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Advise"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".AddDrinks"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".DrinkList"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Instruction"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ButtonGame"
+            android:screenOrientation="portrait" />
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
