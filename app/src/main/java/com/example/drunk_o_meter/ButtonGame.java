@@ -88,6 +88,7 @@ public class ButtonGame extends AppCompatActivity {
             long endTime = System.currentTimeMillis() - startTime;
             int score = (int) (endTime/1000);
             ScoreSingleton.getInstance().addScore(score);
+
             Intent nextActivity = new Intent(ButtonGame.this, Advise.class);
             startActivity(nextActivity);
         }

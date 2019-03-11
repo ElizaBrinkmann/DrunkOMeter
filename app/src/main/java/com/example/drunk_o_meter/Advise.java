@@ -17,9 +17,11 @@ public class Advise extends AppCompatActivity {
 
         TextView tv = findViewById(R.id.textView4);//places the advice in adviceView
         tv.setText(advicePage.giveAdvise());//gives the advice according to the score
+
         TextView sv = findViewById(R.id.textViewScore);
-        sv.setText(ScoreSingleton.getInstance().getScore());
+        sv.setText(String.valueOf(ScoreSingleton.getInstance().getScore()));
     }
+
 //when pressed starts the test again
     public void onClick (View view) {
         Intent nextActivity = new Intent(Advise.this, MainActivity.class);//moves from Advise page to MainActivity

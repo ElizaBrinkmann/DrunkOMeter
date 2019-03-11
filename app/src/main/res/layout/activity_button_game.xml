@@ -16,7 +16,7 @@
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="104dp"
         android:layout_marginRight="104dp"
         android:background="@color/Pink"
@@ -25,7 +25,7 @@
         android:textColor="@color/White"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.779"
+        app:layout_constraintHorizontal_bias="0.688"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
