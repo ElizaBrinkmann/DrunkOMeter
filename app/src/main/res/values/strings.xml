@@ -22,12 +22,6 @@
     <string name="save_drinks">Save drinks</string>
     <string name="textview">0</string>
 
-    <string-array name="Integers">
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-
-    </string-array>
+</resources>
 
 
