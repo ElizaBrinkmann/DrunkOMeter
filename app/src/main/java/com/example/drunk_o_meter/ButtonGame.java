@@ -19,7 +19,9 @@ import android.widget.TextView;
 public class ButtonGame extends AppCompatActivity {
     private int seconds=0;
     private boolean startRun;
-    private String[] integers;
+    Random rnd = new Random();
+
+    private String [] integers;
 
 
     Button but1 = (Button) findViewById(R.id.game_but1);
@@ -28,7 +30,6 @@ public class ButtonGame extends AppCompatActivity {
     Button but4 = (Button) findViewById(R.id.game_but4);
     Button but5 = (Button) findViewById(R.id.game_but5);
 
-    int[] array = {2, 3, 4, 5};
 
 
 
@@ -36,7 +37,6 @@ public class ButtonGame extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         integers = new String[3];
         integers[0] = "2";
         integers[1] = "3";
@@ -93,7 +93,7 @@ public class ButtonGame extends AppCompatActivity {
 
                 ButtonGame.super.onStart();
 
-                int x = 0 + (int)(Math.random() * ((3 - 0) + 1));
+                int x = (int)(Math.random() * ((3) + 1));
                 String helloText = integers[x];
                 TextView.setText(integers[4]);
 
