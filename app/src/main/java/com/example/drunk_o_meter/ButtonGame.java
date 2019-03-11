@@ -7,7 +7,11 @@ import android.view.View;
 
 import java.util.Collections;
 import java.util.Arrays;
+import java.util.Timer;
+import java.util.TimerTask;
+
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -42,8 +46,26 @@ public class ButtonGame extends AppCompatActivity {
         but4.setText(numbers[3]);
         but5.setText(numbers[4]);
 
+        Timer gameTimer = new Timer();
+        gameTimer.scheduleAtFixedRate(new TimerTask() {
+            int seconds = 0;
+
+            @Override
+            public void run() {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        TextView tv = findViewById(R.id.tvTimer);
+                        tv.setText(String.valueOf(seconds));
+                        seconds++;
+                    }
+                });
+            }
+        }, 0, 1000);
+
 
     }
+
 
     public void onClick(View view) {
         Button clicked = (Button)view;
