@@ -5,6 +5,7 @@ import java.util.ArrayList;
 class ScoreSingleton {
     private static final ScoreSingleton ourInstance = new ScoreSingleton();
     //private ArrayList<Score> listOfScore;
+
     static ScoreSingleton getInstance() {
         return ourInstance;
     }
@@ -20,7 +21,7 @@ class ScoreSingleton {
     }
 
     public void addScore(int i){
-        score= score + i;
+        score = score + i;
     }
     @Override
     public String toString() {

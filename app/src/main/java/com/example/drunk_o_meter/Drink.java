@@ -43,14 +43,14 @@ public class Drink {
 
         // for instance 1 beer, 2 wine (1 glass is 25 cl), 3 whiskey etc
         if (typeDrink == 2){
-            addScore((amountOfGlasses));
+            ScoreSingleton.getInstance().addScore(amountOfGlasses);
         }
 
         else if (typeDrink == 1){
-            addScore(amountOfGlasses);
+            ScoreSingleton.getInstance().addScore(amountOfGlasses);
         }
         else if (typeDrink > 2){
-            addScore((amountOfGlasses));
+            ScoreSingleton.getInstance().addScore((amountOfGlasses));
         }
 
 

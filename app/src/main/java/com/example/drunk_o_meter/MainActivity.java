@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     questions questions = new questions();
-    private ScoreSingleton scoreSingleton;
+    //private ScoreSingleton scoreSingleton;
 
 
 
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         }
        if (view.getId() == R.id.button_yes)
         {
-            scoreSingleton.addScore(1);
+            ScoreSingleton.getInstance().addScore(1);
             //TextView tvScore = findViewById(R.id.textViewScore);
             //tvScore.setText(Score.toString());
         }

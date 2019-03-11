@@ -1,6 +1,6 @@
 package com.example.drunk_o_meter;
 
-public class questions extends ScoreSingleton {
+public class questions {
     private int counter = 0;
 
     public questions(){
