@@ -1,11 +1,11 @@
 package com.example.drunk_o_meter;
 
-public class AdvisePage extends ScoreSingleton{
+public class AdvisePage {
 
     int score;
 
     public AdvisePage(){
-        this.score = getScore();
+        this.score = ScoreSingleton.getInstance().getScore();
     }
     public String giveAdvise() {
         if (this.score <= 3) {
