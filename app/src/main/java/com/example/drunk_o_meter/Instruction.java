@@ -6,14 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import java.util.Collections;
-import java.util.Random;
-import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Instruction extends AppCompatActivity {
 
-
+//this is the instruction page, after reading the few lines of instructions, user can press the button below
+    //to get to the next page, start the button game
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
