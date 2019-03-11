@@ -8,6 +8,7 @@ import android.widget.TextView;
 public class AddDrinks extends AppCompatActivity {
 
     private Drink drink;
+    //private ScoreSingleton scoreSingleton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,9 @@ public class AddDrinks extends AppCompatActivity {
         drink = ListOfDrinks.getInstance().getDrinks(i); // int to string
         TextView drinkName = findViewById(R.id.textViewDrink);
         drinkName.setText(drink.getDrinkName());
+        TextView tv = findViewById(R.id.textViewScore);
+        tv.setText(String.valueOf(ScoreSingleton.getInstance().getScore()));
+
     }
 
     public void onPress (View view){
@@ -32,10 +36,11 @@ public class AddDrinks extends AppCompatActivity {
         tv.setText(String.valueOf(drink.getAmountOfGlasses()));
     }
 
+    // send score to scoresingleton
     public void onHit(View view){
         drink.addDrinkInList(drink.getDrinkType(), drink.getAmountOfGlasses());
         TextView tv = findViewById(R.id.textViewScore);
-        //tv.setText(String.valueOf(Score.getScore())); //probably have to do this through super or something.
+        tv.setText(String.valueOf(ScoreSingleton.getInstance().getScore())); //probably have to do this through super or something.
     }
 
 }

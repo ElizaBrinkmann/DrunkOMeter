@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddDrinks"></activity>
+        <activity android:name=".Advise"></activity>
+        <activity android:name=".AddDrinks" />
         <activity android:name=".DrinkList" />
         <activity android:name=".Instruction" />
         <activity android:name=".ButtonGame" />
