@@ -15,7 +15,7 @@ public class Advise extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_advise);
 
-        TextView tv = findViewById(R.id.adviseView);//places the advice in adviceView
+        TextView tv = findViewById(R.id.textView4);//places the advice in adviceView
         tv.setText(advicePage.giveAdvise());//gives the advice according to the score
     }
 //when pressed starts the test again

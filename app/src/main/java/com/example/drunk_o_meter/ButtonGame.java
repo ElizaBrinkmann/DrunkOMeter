@@ -8,6 +8,7 @@ import android.view.View;
 import java.util.Collections;
 import java.util.Arrays;
 import android.widget.Button;
+import android.widget.Toast;
 
 
 public class ButtonGame extends AppCompatActivity {
@@ -15,13 +16,6 @@ public class ButtonGame extends AppCompatActivity {
     private long startTime;
     private String[] numbers = {"1", "2", "3", "4", "5"};
     private int currentNumber = 1;
-
-
-    Button but1 = findViewById(R.id.game_but1);
-    Button but2 = findViewById(R.id.game_but2);
-    Button but3 = findViewById(R.id.game_but3);
-    Button but4 = findViewById(R.id.game_but4);
-    Button but5 = findViewById(R.id.game_but4);
 
 
 
@@ -32,12 +26,23 @@ public class ButtonGame extends AppCompatActivity {
         setContentView(R.layout.activity_button_game);
         startTime = System.currentTimeMillis();
 
+
+        Button but1 = findViewById(R.id.game_but1);
+        Button but2 = findViewById(R.id.game_but2);
+        Button but3 = findViewById(R.id.game_but3);
+        Button but4 = findViewById(R.id.game_but4);
+        Button but5 = findViewById(R.id.game_but5);
+
+
+
         Collections.shuffle(Arrays.asList(numbers));
         but1.setText(numbers[0]);
         but2.setText(numbers[1]);
         but3.setText(numbers[2]);
         but4.setText(numbers[3]);
         but5.setText(numbers[4]);
+
+
     }
 
     public void onClick(View view) {
@@ -49,6 +54,10 @@ public class ButtonGame extends AppCompatActivity {
              */
             currentNumber++;
             clicked.setText("---");
+            clicked.setClickable(false);
+        }
+        else {
+            Toast.makeText(view.getContext(), "Wrong number!", Toast.LENGTH_SHORT).show();
         }
 
         //Maybe something like this to end the game
@@ -60,6 +69,7 @@ public class ButtonGame extends AppCompatActivity {
             Intent nextActivity = new Intent(ButtonGame.this, Advise.class);
             startActivity(nextActivity);
         }
+
     }
 
 }
