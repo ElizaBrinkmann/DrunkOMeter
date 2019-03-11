@@ -24,6 +24,7 @@ public class Advise extends AppCompatActivity {
 
 //when pressed starts the test again
     public void onClick (View view) {
+        ScoreSingleton.getInstance().restartScore();
         Intent nextActivity = new Intent(Advise.this, MainActivity.class);//moves from Advise page to MainActivity
         startActivity(nextActivity);//starting new activity
     }

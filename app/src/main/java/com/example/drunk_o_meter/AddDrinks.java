@@ -37,15 +37,19 @@ public class AddDrinks extends AppCompatActivity {
         tv.setText(String.valueOf(drink.getAmountOfGlasses()));
     }
 
-    // send score to scoresingleton
+    // send score to score singleton
     public void onHit(View view){
         drink.addDrinkInList(drink.getDrinkType(), drink.getAmountOfGlasses());
+        drink.resetAmountOfGlasses();
+        TextView tv = findViewById(R.id.TextViewNumberOfDrinks);
+        tv.setText(String.valueOf(drink.getAmountOfGlasses()));
         //TextView tv = findViewById(R.id.textViewScore);
         //tv.setText(String.valueOf(ScoreSingleton.getInstance().getScore())); //probably have to do this through super or something.
     }
 
-    public void onSlap(View view){
-        Intent nextActivity = new Intent(AddDrinks.this, Instruction.class);
+    //go back to the listView
+    public void onPunch(View view){
+        Intent nextActivity = new Intent(AddDrinks.this, DrinkList.class);
         startActivity(nextActivity);
     }
 }

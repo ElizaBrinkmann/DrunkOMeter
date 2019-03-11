@@ -20,6 +20,8 @@ class ScoreSingleton {
         return score;
     }
 
+    public void restartScore(){ this.score =0; }
+
     public void addScore(int i){
         score = score + i;
     }
@@ -28,4 +30,5 @@ class ScoreSingleton {
 
         return ""+this.score;
     }
+
 }

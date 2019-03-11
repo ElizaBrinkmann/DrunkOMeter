@@ -35,6 +35,10 @@ public class Drink {
 
     }
 
+    public void resetAmountOfGlasses(){
+        this.amountOfGlasses = 0;
+    }
+
     public int getAmountOfGlasses(){
         return this.amountOfGlasses;
     }

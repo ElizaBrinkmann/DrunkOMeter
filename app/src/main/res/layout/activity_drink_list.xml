@@ -8,24 +8,25 @@
     android:paddingLeft="15dp"
     android:paddingTop="25dp"
     android:paddingRight="15dp"
-    tools:context=".DrinkList" >
+    tools:context=".DrinkList">
 
 
     <TextView
         android:id="@+id/textView_title"
-        android:layout_width="250dp"
-        android:layout_height="22dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="44dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="25dp"
         android:gravity="center_vertical|center_horizontal"
         android:text="@string/textView_title"
         android:textColor="@color/White"
-        android:textSize="20sp"
+        android:textSize="28sp"
         android:textStyle="bold"
         android:typeface="monospace"
-        app:layout_constraintBottom_toTopOf="@+id/Drinks"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="@+id/textView6"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
@@ -36,12 +37,53 @@
         android:layout_marginLeft="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
+        android:layout_marginBottom="74dp"
         android:background="@color/White"
         android:foregroundGravity="center_vertical|center_horizontal"
         android:scrollHorizontally="true"
         android:textAlignment="gravity"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.278" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="50dp"
+        android:background="#020000"
+        android:onClick="onSlap"
+        android:text="@string/next"
+        android:textColor="@color/White"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:typeface="monospace"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Drinks" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="29dp"
+        android:background="#020000"
+        android:text="@string/only_from_the_last_5_hours_once_added_it_cant_be_removed_press_back_to_add_other_drinks"
+        android:textColor="@color/White"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        app:layout_constraintBottom_toTopOf="@+id/Drinks"
+        app:layout_constraintEnd_toEndOf="@+id/Drinks"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_title" />
 

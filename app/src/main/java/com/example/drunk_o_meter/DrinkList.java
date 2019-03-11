@@ -33,4 +33,9 @@ public class DrinkList extends AppCompatActivity {
             }
         });
     }
+
+    public void onSlap(View view){
+        Intent nextActivity = new Intent(DrinkList.this, Instruction.class);
+        startActivity(nextActivity);
+    }
 }
