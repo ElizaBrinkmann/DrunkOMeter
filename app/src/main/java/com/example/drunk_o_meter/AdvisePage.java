@@ -4,10 +4,18 @@ public class AdvisePage {
 
     int score;
 
+    /**
+     * gets the score from the singleton
+     */
     public AdvisePage(){
-        this.score = ScoreSingleton.getInstance().getScore();//gets the score from the singleton
+        this.score = ScoreSingleton.getInstance().getScore();
     }
-    public String giveAdvise() {//gives the advise according to the final score
+
+    /**
+     * gives the advise according to the final score
+     * @return advice String
+     */
+    public String giveAdvise() {
         if (this.score <= 4) {
             return ("You are not drunk!");
         } else if (this.score > 4 && this.score <=7) {
