@@ -17,9 +17,11 @@ import android.widget.Toast;
 
 public class ButtonGame extends AppCompatActivity {
 
-    private long startTime;
-    private String[] numbers = {"1", "2", "3", "4", "5"};
+    private long startTime;  // firstly, to declare the stopwatch first
+    private String[] numbers = {"1", "2", "3", "4", "5"}; //the string the text shown on the top of the buttons
     private int currentNumber = 1;
+
+
 
 
 
@@ -44,7 +46,9 @@ public class ButtonGame extends AppCompatActivity {
         but2.setText(numbers[1]);
         but3.setText(numbers[2]);
         but4.setText(numbers[3]);
-        but5.setText(numbers[4]);
+        but5.setText(numbers[4]);  //Shuffle of the array of 5 numbers, randomly generating the orders
+
+
 
         Timer gameTimer = new Timer();
         gameTimer.scheduleAtFixedRate(new TimerTask() {
@@ -61,7 +65,8 @@ public class ButtonGame extends AppCompatActivity {
                     }
                 });
             }
-        }, 0, 1000);
+        }, 0, 1000); //Stopwatch counting the times by second.
+        //the speed of completing this task will turn into scores, see scores.java
 
 
     }
