@@ -17,7 +17,7 @@ public class Drink {
 
     /**
      * Gets the name of the drink
-     * @return
+     * @return name of the drink
      */
     public String getDrinkName(){
         return this.drinkName;
