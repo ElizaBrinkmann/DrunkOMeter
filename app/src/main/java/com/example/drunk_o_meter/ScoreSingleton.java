@@ -20,9 +20,9 @@ class ScoreSingleton {
         return score;
     }
 
-    public void restartScore(){ this.score =0; }
+    public void restartScore(){ this.score =0; }//reset the score to 0
 
-    public void addScore(int i){
+    public void addScore(int i){//increases the score with certain given number
         score = score + i;
     }
     @Override
