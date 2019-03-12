@@ -8,14 +8,16 @@ import android.widget.TextView;
 
 public class AddDrinks extends AppCompatActivity {
 
+    //calling upon the singleton
     private Drink drink;
-    //private ScoreSingleton scoreSingleton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_drinks);
 
+        //get selected drink from the listview and setting it into a textview
         int i = getIntent().getIntExtra("Chosen drink", 0);
         drink = ListOfDrinks.getInstance().getDrinks(i); // int to string
         TextView drinkName = findViewById(R.id.textViewDrink);
@@ -25,26 +27,26 @@ public class AddDrinks extends AppCompatActivity {
 
     }
 
+    //add a glass with the add button and update the textview
     public void onPress (View view){
         drink.addAmountOfGlasses();
         TextView tv = findViewById(R.id.TextViewNumberOfDrinks);
         tv.setText(String.valueOf(drink.getAmountOfGlasses()));
     }
 
+    //one less glass and set it to the textview
     public void onClick (View view){
         drink.lessAmountOfGlasses();
         TextView tv = findViewById(R.id.TextViewNumberOfDrinks);
         tv.setText(String.valueOf(drink.getAmountOfGlasses()));
     }
 
-    // send score to score singleton
+    // send score the score to the singleton and then reset the amount so people understand it has  been 'sent', update textview
     public void onHit(View view){
-        drink.addDrinkInList(drink.getDrinkType(), drink.getAmountOfGlasses());
+        drink.addDrinkInList(drink.getAmountOfGlasses());
         drink.resetAmountOfGlasses();
         TextView tv = findViewById(R.id.TextViewNumberOfDrinks);
         tv.setText(String.valueOf(drink.getAmountOfGlasses()));
-        //TextView tv = findViewById(R.id.textViewScore);
-        //tv.setText(String.valueOf(ScoreSingleton.getInstance().getScore())); //probably have to do this through super or something.
     }
 
     //go back to the listView

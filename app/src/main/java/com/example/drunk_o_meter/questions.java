@@ -5,18 +5,25 @@ public class questions {
 
     public questions(){
         this.counter = 0;
-
     }
 
-    public void counting(){
+    /**
+     * go through the questions
+     */
+    public void counting(){ this.counter ++;}
 
-        this.counter ++;
-    }
-
+    /**
+     * checks at what question it is
+     * @return int counter, at what question it is
+     */
     public int getCount(){
         return this.counter;
     }
 
+    /**
+     * Send the question in a string
+     * @return question
+     */
     public String toString(){
         if (this.counter == 0){
             return ("Are you drunk?");
