@@ -1,30 +1,36 @@
 package com.example.drunk_o_meter;
 
 public class Drink {
-    //will submit/supply the score class with the amount of drinks
+    //will submit/supply the score singleton with the amount of drinks
     String drinkName;
-    int drinkType;
+
     int amountOfGlasses;
     int scoreDrinks;
 
 
 
-    public Drink(String drinkName, int drinkType ){
+    public Drink(String drinkName){
         this.drinkName = drinkName;
-        this.drinkType = drinkType;
         this.amountOfGlasses = 0;
         this.scoreDrinks = 0;
     }
 
+    /**
+     * Gets the name of the drink
+     * @return
+     */
     public String getDrinkName(){
         return this.drinkName;
     }
-    public void setDrinkName(String drinkName){ this.drinkName = drinkName; } //can probably be deleted
 
-    public int getDrinkType(){ return this.drinkType;}
-
+    /**
+     * increases the amount of drinks had
+     */
     public void addAmountOfGlasses(){ this.amountOfGlasses ++;}
 
+    /**
+     * Decreases the amount of drinks had but cannot decrease by negative number.
+     */
     public void lessAmountOfGlasses(){
         if (this.amountOfGlasses > 0) {
             this.amountOfGlasses --;
@@ -35,30 +41,29 @@ public class Drink {
 
     }
 
+    /**
+     * reset the amount of glasses had back to 0
+     */
     public void resetAmountOfGlasses(){
         this.amountOfGlasses = 0;
     }
 
+    /**
+     * Shows how many glasses have been drunk
+     * @return amount of glasses drunk
+     */
     public int getAmountOfGlasses(){
         return this.amountOfGlasses;
     }
 
-    public void addDrinkInList(int typeDrink, int amountOfGlasses ){
-
-        // for instance 1 beer, 2 wine (1 glass is 25 cl), 3 whiskey etc
-        if (typeDrink == 2){
+    /**
+     * send the amount of glasses as a score to score singleton
+     * @param amountOfGlasses
+     */
+    public void addDrinkInList(int amountOfGlasses){
             ScoreSingleton.getInstance().addScore(amountOfGlasses);
-        }
-
-        else if (typeDrink == 1){
-            ScoreSingleton.getInstance().addScore(amountOfGlasses);
-        }
-        else if (typeDrink > 2){
-            ScoreSingleton.getInstance().addScore((amountOfGlasses));
-        }
-
-
     }
+
 
     @Override
     public String toString() {

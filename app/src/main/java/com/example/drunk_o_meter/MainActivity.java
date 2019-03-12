@@ -33,15 +33,10 @@ public class MainActivity extends AppCompatActivity {
        if (view.getId() == R.id.button_yes)
         {
             ScoreSingleton.getInstance().addScore(1);
-            //TextView tvScore = findViewById(R.id.textViewScore);
-            //tvScore.setText(Score.toString());
         }
         questions.counting();
         TextView tv = findViewById(R.id.textView);
         tv.setText(questions.toString());
-
-
-
     }
 
 

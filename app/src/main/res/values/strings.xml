@@ -22,7 +22,7 @@
     <string name="save_drinks">Save drinks</string>
     <string name="textview">0</string>
     <string name="next">Next</string>
-    <string name="only_from_the_last_5_hours_once_added_it_cant_be_removed_press_back_to_add_other_drinks">Scroll and select all the drinks that you\'ve had. Done with adding all drinks press NEXT"</string>
+    <string name="only_from_the_last_5_hours_once_added_it_cant_be_removed_press_back_to_add_other_drinks">Scroll and select all the drinks that you\'ve had. When done with adding all drinks press NEXT"</string>
     <string name="insert_drinks">INSERT DRINKS</string>
     <string name="tvTimer">0</string>
     <string name="textViewScore">0</string>
@@ -30,7 +30,7 @@
     <string name="textView4">TextView4</string>
     <string name="score">SCORE</string>
     <string name="back">BACK</string>
-    <string name="your_score">YOUR SCORE:</string>
+    <string name="your_score">YOUR SCORE NOW:</string>
 
     <string-array name="Integers">
         <item>2</item>

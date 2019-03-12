@@ -86,7 +86,8 @@ public class ButtonGame extends AppCompatActivity {
         if(currentNumber == 6){
             //The number will be 6 after successfully clicking the 5th button.
             long endTime = System.currentTimeMillis() - startTime;
-            int score = (int) (endTime/1000);
+            // score is the amount of seconds it takes about 3 seconds to make it sober
+            int score =(((int) (endTime/1000)) - 3);
             ScoreSingleton.getInstance().addScore(score);
 
             Intent nextActivity = new Intent(ButtonGame.this, Advise.class);

@@ -16,9 +16,11 @@ public class DrinkList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drink_list);
 
+        // show the different drinks in the listview
         ListView lv = findViewById(R.id.Drinks);
         lv.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, ListOfDrinks.getInstance().getListOfDrinks())); //array of data);
 
+        // when a drink is clicked go to adding drinks page and with extra which drink has been selected
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
@@ -27,13 +29,11 @@ public class DrinkList extends AppCompatActivity {
                 Intent nextActivity = new Intent(view.getContext(), AddDrinks.class);
                 nextActivity.putExtra("Chosen drink", i);
                 startActivity(nextActivity);
-
-
-
             }
         });
     }
 
+    // When next is pressed move to the next activity the buttongame
     public void onSlap(View view){
         Intent nextActivity = new Intent(DrinkList.this, Instruction.class);
         startActivity(nextActivity);
